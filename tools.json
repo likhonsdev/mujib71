@@ -1,0 +1,97 @@
+{
+  "name": "Project Management Tool",
+  "description": "A tool for managing project context, automating tasks, and facilitating human-in-the-loop interactions.",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "license": "MIT",
+  "configurations": {
+    "projectDirectory": "/path/to/your/project",
+    "logFile": "/path/to/your/logs/actions.log",
+    "memoryFile": "/path/to/your/memory.txt",
+    "requestsDirectory": "/path/to/your/requests",
+    "responsesDirectory": "/path/to/your/responses",
+    "dataDirectory": "/path/to/your/data",
+    "statusDirectory": "/path/to/your/status"
+  },
+  "apiKeys": {
+    "togetherAPI": "your_together_api_key",
+    "cohereAPI": "your_cohere_api_key",
+    "geminiAPI": "your_gemini_api_key"
+  },
+  "features": {
+    "automaticContextGathering": {
+      "description": "Automatically reads related files, explores project structure, analyzes patterns, and maps dependencies.",
+      "enabled": true
+    },
+    "humanInTheLoop": {
+      "description": "Facilitates human input for reviewing and approving tasks.",
+      "enabled": true
+    },
+    "subgraphSupport": {
+      "description": "Encapsulates tasks as reusable nodes for better project management.",
+      "enabled": true
+    },
+    "memoryManagement": {
+      "description": "Persists state across agent interactions using a key-value store.",
+      "enabled": true
+    },
+    "apiIntegrations": {
+      "description": "Integrates with Together, Cohere, and Gemini APIs for text generation.",
+      "enabled": true
+    },
+    "fileOperations": {
+      "description": "Creates, edits, and validates files with error checking.",
+      "enabled": true
+    }
+  },
+  "agents": [
+    {
+      "id": 1,
+      "name": "Data Collection Agent",
+      "description": "Collects and saves data for the project.",
+      "tasks": ["collect_data"]
+    },
+    {
+      "id": 2,
+      "name": "Data Preprocessing Agent",
+      "description": "Preprocesses the collected data.",
+      "tasks": ["preprocess_data"]
+    },
+    {
+      "id": 3,
+      "name": "Model Training Agent",
+      "description": "Trains the model using the preprocessed data.",
+      "tasks": ["train_model"]
+    },
+    {
+      "id": 4,
+      "name": "Model Evaluation Agent",
+      "description": "Evaluates the trained model.",
+      "tasks": ["evaluate_model"]
+    }
+  ],
+  "tasks": {
+    "collect_data": {
+      "description": "Generates and saves Bengali text via API.",
+      "script": "collect_data.sh"
+    },
+    "preprocess_data": {
+      "description": "Analyzes and preprocesses the collected data.",
+      "script": "preprocess_data.sh"
+    },
+    "train_model": {
+      "description": "Trains the model using the preprocessed data.",
+      "script": "train_model.sh"
+    },
+    "evaluate_model": {
+      "description": "Evaluates the trained model.",
+      "script": "evaluate_model.sh"
+    }
+  },
+  "scripts": {
+    "collect_data.sh": "path/to/collect_data.sh",
+    "preprocess_data.sh": "path/to/preprocess_data.sh",
+    "train_model.sh": "path/to/train_model.sh",
+    "evaluate_model.sh": "path/to/evaluate_model.sh"
+  }
+}
